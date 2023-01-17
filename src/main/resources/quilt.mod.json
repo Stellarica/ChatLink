@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "quilt_loader": {
+    "group": "net.stellarica.chat",
+    "id": "chatlink",
+    "version": "${version}",
+    "metadata": {
+      "name": "Chat Link",
+      "description": "Discord <-> Minecraft Chat Link",
+      "contributors": {
+        "trainb0y": "Owner"
+      },
+      "contact": {
+        "homepage": "https://stellarica.net/",
+        "issues": "https://github.com/Stellarica/ChatLink/issues",
+        "sources": "https://github.com/Stellarica/ChatLink"
+      },
+      "icon": "assets/chatlink/icon.png"
+    },
+    "intermediate_mappings": "net.fabricmc:intermediary",
+    "entrypoints": {
+      "server_init": {
+        "adapter": "kotlin",
+        "value": "net.stellarica.chat.ChatLink"
+      }
+    },
+    "depends": [
+      {
+        "id": "quilt_loader",
+        "versions": ">=0.17.6-"
+      },
+      {
+        "id": "quilted_fabric_api",
+        "versions": ">=5.0.0-"
+      },
+      {
+        "id": "qkl",
+        "versions": ">=0.1.4-"
+      },
+      {
+        "id": "minecraft",
+        "versions": ">=1.19.3"
+      }
+    ]
+  },
+  "mixin": "chatlink.mixins.json"
+}
